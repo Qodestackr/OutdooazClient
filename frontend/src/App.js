@@ -29,9 +29,9 @@ function App() {
             offset: 200,
             duration: 500,
             easing: "ease-in-sine",
-        });
-    }, []); // eslint-disable-line
-   
+        })
+    }, [])
+    
     return (
         <>
             <Router>
