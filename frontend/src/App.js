@@ -24,7 +24,18 @@ import Unauthorized from "./Components/Global/Unauthorized"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
+import Demo from "./Components/Book/Demo"// demo
+
 function App() {
+
+
+    const product = {
+        price: 75,
+        name: 'comfy apartment',
+        description: 'fancy apartment',
+        image: "http://placehold.it/300x300?text=no image available"
+      }
+
 
     useEffect(() => {
         AOS.init({
@@ -38,6 +49,11 @@ function App() {
         <>
             <Router>
                 <Switch>
+
+                <Route exact path="/demo-pay">
+                <Demo product={product} />
+                </Route>
+
                     {/* PUBLIC */}
 
                     <Route exact path="/" component={Home} />
