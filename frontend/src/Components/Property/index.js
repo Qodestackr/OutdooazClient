@@ -8,7 +8,7 @@ function Hotel(props) {
     return (
         <>
             <Border />
-
+        <h1>Show a Property</h1>
             <Footer />
         </>
     )

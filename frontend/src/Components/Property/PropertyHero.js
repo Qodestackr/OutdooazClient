@@ -18,11 +18,7 @@ function PropertyHero({ hotel }) {
                 }}
             ></div>
             <img
-                src={
-                    hotel && hotel.image
-                        ? `${process.env.REACT_APP_BASE_URL}/img/hotels/${hotel.image}`
-                        : "http://placehold.it/300x300?text=hotel"
-                }
+                src= "http://placehold.it/300x300?text=hotel"
                 alt="hotel"
                 className="w-full object-cover"
                 style={{ height: "60vh" }}
