@@ -6,11 +6,12 @@ import Footer from "../Global/Footer"
 
 import Loading from '../Global/Loading'
 
-function Search({properties,fetchProperties}) {
+function Search({properties, fetchProperties}) {
 
-useEffect(() => {
-    fetchProperties()
-}, [])
+        useEffect(() => {
+            fetchProperties()
+        }, [])
+
     return (
         <>
             <Header />
@@ -23,19 +24,20 @@ useEffect(() => {
                             
                             <li key={property._id} className="text-black">
                                 {console.log(property)}
-                                <h2 className="text-center text-2xl uppercase">{property.roomTitle}</h2>
+                                <h2 className="text-2xl uppercase">{property.roomTitle}</h2>
                                 <img src={`http://localhost:5200/${property.mediaUrl}`} alt="" width="100%" height="80%"/>
+                                <p> description... declarative desc::</p>
                               
-                              <Link to='/book'><button className="text-center text-white bg-gray-800 
+                              <Link to='/book'><button className="text-white bg-gray-800 
                                         hover:bg-gray-700 uppercase text-sm px-12 py-4 
                                         shadow hover:shadow-lg">BOOK PROPERTY</button>
                                         </Link>
                                 <span className="text-sm ml-5 text-xl text-gray-800"> $75</span>        
-                            </li>
-                            
+                            </li>   
                         )
                     })}
-                    </div>
+    
+                    </div> 
                 </ul>
                 
             </div>

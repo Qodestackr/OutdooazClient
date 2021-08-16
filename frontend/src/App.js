@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 
@@ -36,9 +36,6 @@ function App() {
         setProperties(properties)
     }
 
-    
-
-
     const product = {
         price: 75,
         name: 'comfy apartment',
@@ -72,12 +69,16 @@ function App() {
                     <Route exact path="/logout" component={Logout} />
                     <Route exact path="/property/" component={Property} />
 
-                    <Route
-                        path="/search"
-                        component={Search}
-                        fetchProperties={fetchProperties}
-                        properties={properties}
-                    />
+                    <Route path="/search">
+                    <Search  fetchProperties={fetchProperties}
+                        properties={properties}/>
+                    </Route>
+                    {/* <Route path="/property/:id" component={PropertyMain} />
+                    <Route path="/book/:id" component={Book} />
+                    <Route path="/user/profile" component={UserProfile} />
+                    <Route path="/user/bookings" component={UserBookings} />
+                    <Route path="/demo-pay" component={RedirectPage} /> */}
+
                     <Route exact path="/book" component={Book} />
 
                     {/* USER */}
