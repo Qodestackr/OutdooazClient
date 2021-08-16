@@ -1,0 +1,16 @@
+ .App{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+  img{
+      width: 48%;
+      height: 5%;
+  }
+
+  .ref{
+      margin-top: 20px;
+      width: 54vw;
+  }
