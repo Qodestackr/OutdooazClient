@@ -22,14 +22,11 @@ function UserProfileMain() {
 
     return (
         <div className="w-full md:w-6/12 xl:w-8/12 md:ml-5 bg-gray-200 p-5 rounded-sm ">
-            {/* {state.users && (
                 <>
-                    <UserPersonalInfo user={state.users.user} id={id} />
-                    <UserEmail id={id} />
-                    <UserPassword id={id} />
+                    <UserPersonalInfo user="wilson" id="id" />
+                    <UserEmail id="id" />
+                    <UserPassword id="id" />
                 </>
-            )} */}
-            UserProfileMain
         </div>
     )
 }

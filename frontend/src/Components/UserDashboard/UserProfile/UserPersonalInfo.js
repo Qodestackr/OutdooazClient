@@ -14,7 +14,7 @@ function UserPersonalInfo({ user, id }) {
             >
                 <div className="flex items-center mt-5">
 
-                    <label aria-label="upload image" className="ml-5 px-5 py-2 text-gray-200 bg-orange-500 hover:bg-orange-900 rounded-sm cursor-pointer">
+                    <label aria-label="upload image" className="ml-5 px-5 py-2 text-gray-200 bg-gray-500 hover:bg-gray-900 rounded-sm cursor-pointer">
                         <input
                             type="file"
                             name=""
@@ -67,7 +67,7 @@ function UserPersonalInfo({ user, id }) {
                 />
 
                 <button
-                    className="text-center bg-yellow-600 text-white hover:bg-yellow-700 uppercase text-sm px-6 py-2 shadow
+                    className="text-center bg-gray-600 text-white hover:bg-gray-700 uppercase text-sm px-6 py-2 shadow
                     hover:shadow-lg block mt-5"
                     type="submit">
                     Update

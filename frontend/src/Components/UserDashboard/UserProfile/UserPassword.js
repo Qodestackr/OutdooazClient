@@ -51,7 +51,7 @@ function UserPassword({ id }) {
                 />
 
                 <button
-                    className="text-center bg-yellow-600 text-white hover:bg-yellow-700 uppercase text-sm px-6 py-2 shadow
+                    className="text-center bg-gray-600 text-white hover:bg-gray-700 uppercase text-sm px-6 py-2 shadow
                     hover:shadow-lg block mt-5"
                     type="submit"
                 >
