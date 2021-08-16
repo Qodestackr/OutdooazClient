@@ -22,15 +22,14 @@ function SignupForm() {
                 Firstname,
                 Lastname,
                 email: email,
-                password: password,
-                // is_admin: 0
+                password: password
             }
         })
             .then((response) => {
-                console.log("signup success", response.data)
+                localStorage.setItem("token", response.data.token)
+                window.location.href = "/"
             })
             .catch((error) => {
-        //         window.location.replace("/")
                     console.log(error)
             })
     }

@@ -27,7 +27,7 @@ function LoginForm() {
         })
             .then((response) => {
                 console.log(response.data)
-                // localStorage.setItem("first_login", true)
+                localStorage.setItem("first_login", true)
                 localStorage.setItem("login_token", response.data.token)
             })
             .catch((error) => {

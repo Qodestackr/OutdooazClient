@@ -38,8 +38,8 @@ function App() {
 
     const product = {
         price: 75,
-        name: 'comfy apartment',
-        description: 'fancy apartment',
+        name: 'Property booking',
+        description: 'Complete Your Booking For',
         image: "http://placehold.it/300x300?text=no image available"
       }
 
@@ -73,11 +73,6 @@ function App() {
                     <Search  fetchProperties={fetchProperties}
                         properties={properties}/>
                     </Route>
-                    {/* <Route path="/property/:id" component={PropertyMain} />
-                    <Route path="/book/:id" component={Book} />
-                    <Route path="/user/profile" component={UserProfile} />
-                    <Route path="/user/bookings" component={UserBookings} />
-                    <Route path="/demo-pay" component={RedirectPage} /> */}
 
                     <Route exact path="/book" component={Book} />
 
