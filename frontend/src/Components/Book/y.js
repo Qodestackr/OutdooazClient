@@ -69,7 +69,7 @@ function App() {
     <div className="App">
       <Product product={product} />
     </div>
-  );
+  )
 }
 
 export default App
