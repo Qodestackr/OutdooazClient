@@ -55,7 +55,7 @@ export default function Demo({ product }) {
       <h1 className="text-black text-2xl">
         {product.description} for ${product.price}
       </h1>
-      <img alt={product.description} src={product.image}/>
+      <img alt={product.description} src={product.image} className="demo-img"/>
       <div ref={paypalRef} className="ref"/>
     </div>
     </>

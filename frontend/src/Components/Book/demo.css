@@ -5,9 +5,9 @@
      align-items: center;
  }
 
-  img{
-      width: 48%;
-      height: 5%;
+  .demo-img{
+      width: 45%;
+      min-height: 20%;
   }
 
   .ref{

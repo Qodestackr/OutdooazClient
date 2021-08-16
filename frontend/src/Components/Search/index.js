@@ -25,7 +25,7 @@ function Search({properties, fetchProperties}) {
                             <li key={property._id} className="text-black">
                                 {console.log(property)}
                                 <h2 className="text-2xl uppercase">{property.roomTitle}</h2>
-                                <img src={`http://localhost:5200/${property.mediaUrl}`} alt="" width="100%" height="80%"/>
+                                <img src={`http://localhost:5200/${property.mediaUrl}`} alt=""/>
                                 <p> description... declarative desc::</p>
                               
                               <Link to='/book'><button className="text-white bg-gray-800 
