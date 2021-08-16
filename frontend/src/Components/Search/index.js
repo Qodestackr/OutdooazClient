@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 import Header from "../Global/Header"
 import Footer from "../Global/Footer"
 
+import Loading from '../Global/Loading'
 
 function Search() {
 const [properties, setProperties] = useState([])
@@ -25,7 +26,7 @@ useEffect(() => {
             <div className="p-8 flex flex-col lg:flex-row text-black">
                 <ul className="mt-4 text-black">
                 <div className="flex p-8 flex-col justify-center">
-                {properties && 
+                {properties ?
                     properties.map(property => {
                         return (
                             
@@ -40,9 +41,11 @@ useEffect(() => {
                             </li>
                             
                         )
-                    })}
+                    }): <Loading/>}
+                    <Loading/>
                     </div>
                 </ul>
+                
             </div>
             <Footer />
         </>
