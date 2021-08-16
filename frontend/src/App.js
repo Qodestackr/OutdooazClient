@@ -28,6 +28,16 @@ import Demo from "./Components/Book/Demo"// demo
 
 function App() {
 
+    const [properties, setProperties] = useState([])
+
+    const fetchProperties = async () => {
+        const response = await fetch("http://localhost:5200/properties")
+        const properties = await response.json()
+        setProperties(properties)
+    }
+
+    
+
 
     const product = {
         price: 75,
@@ -65,8 +75,9 @@ function App() {
                     <Route
                         path="/search"
                         component={Search}
+                        fetchProperties={fetchProperties}
+                        properties={properties}
                     />
-
                     <Route exact path="/book" component={Book} />
 
                     {/* USER */}

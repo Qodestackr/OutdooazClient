@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 
-function BookingDetails({product}) {
+function BookingDetails({properties}) {
     // const [paidFor, setPaidFor] = useState(false);
     // const [error, setError] = useState(null);
     // const paypalRef = useRef()
@@ -60,6 +60,7 @@ function BookingDetails({product}) {
                     <div className="p-5 md:w-3/4">
                         <div className="font-semibold text-2xl flex flex-col md:flex-row md:justify-between">
                             <span>Property Name</span>
+                            <h1 className="text-black">{JSON.stringify(properties)}</h1>
                             <span>
                                 Kshs.<span>Price</span>
                             </span>
