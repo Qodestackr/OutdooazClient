@@ -9,9 +9,10 @@ function PropertyMain(props) {
  
     return (
         <>
+            <Header/>
             <Border />
             <Property/>
-        <PropertyGoogleMap/>
+            <PropertyGoogleMap/>
             <Footer />
         </>
     )

@@ -28,9 +28,9 @@ export class MapContainer extends React.Component {
                     }}
                     onClick={() => console.log(this.state.venues)}
                 />
-            );
-        });
-    };
+            )
+        })
+    }
     componentDidMount() {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition((position) => {
@@ -39,12 +39,10 @@ export class MapContainer extends React.Component {
                 console.log("Longitude is :", position.coords.longitude);
                 this.setState({ lat: position.coords.latitude, lng: position.coords.longitude })
 
-
-            });
-
+            })
 
         } else {
-            console.log("Not Available");
+            console.log("Not Available")
         }
     }
     render() {
@@ -65,10 +63,10 @@ export class MapContainer extends React.Component {
                     onClick={() => console.log(this.state.venues)}>
                 </Marker>
             </Map >
-        );
+        )
     }
 }
 
 export default GoogleApiWrapper({
     apiKey: apiMaps
-})(MapContainer);
+})(MapContainer)
