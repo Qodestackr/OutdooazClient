@@ -11,13 +11,13 @@ function UserSiderBar() {
     const [currentPage, setCurrentPage] = useState(0)
     useEffect(() => {
         switch (location.pathname) {
-            case `/user-profile/${id}`:
+            case `/user-profile`:
                 setCurrentPage(1);
                 break
-            case `/user-bookings/${id}`:
+            case `/user-bookings`:
                 setCurrentPage(2);
                 break
-            case `/user-reviews/${id}`:
+            case `/user-reviews`:
                 setCurrentPage(3);
                 break
             default:
@@ -27,7 +27,7 @@ function UserSiderBar() {
     return (
         <div className="hidden md:block w-full md:w-4/12 xl:w-3/12 bg-gray-200 pt-5 lg:p-5 rounded-sm ">
             <Link
-                to={`/user-profile/${id}`}
+                to={`/user-profile`}
                 className={`block py-2 px-4 rounded-sm hover:bg-gray-400 ${
                     currentPage === 1 && "bg-gray-400"
                 }`}
@@ -39,7 +39,7 @@ function UserSiderBar() {
             <div className="hidden md:block border-t w-2/3 my-5"></div>
 
             <Link
-                to={`/user-bookings/${id}`}
+                to={`/user-bookings`}
                 className={`block py-2 px-4 rounded-sm hover:bg-gray-400 ${
                     currentPage === 2 && "bg-gray-400"
                 }`}
@@ -51,7 +51,7 @@ function UserSiderBar() {
             <div className="hidden md:block border-t w-2/3 my-5"></div>
 
             <Link
-                to={`/user-reviews/${id}`}
+                to={`/user-reviews`}
                 className={`block py-2 px-4 rounded-sm hover:bg-gray-400 ${
                     currentPage === 3 && "bg-gray-400"
                 }`}

@@ -13,7 +13,7 @@ function UserDropDown() {
                 <ul className="dropdown-content hidden text-gray-700 pt-2">
                     <li>
                         <Link
-                            to={`/user-profile/`}
+                            to={`/user-profile`}
                             className="rounded-sm bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
                         >
                             <i className="fas fa-user-alt mr-2"></i>
@@ -22,7 +22,7 @@ function UserDropDown() {
                     </li>
                     <li>
                         <Link
-                            to={`/user-bookings/`}
+                            to={`/user-bookings`}
                             className="rounded-sm bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
                         >
                             <i className="fas fa-ticket-alt mr-2"></i>
@@ -31,7 +31,7 @@ function UserDropDown() {
                     </li>
                     <li>
                         <Link
-                            to={`/user-reviews/`}
+                            to={`/user-reviews`}
                             className="rounded-sm bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
                         >
                             <i className="fas fa-pen mr-2"></i>

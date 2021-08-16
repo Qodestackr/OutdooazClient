@@ -16,17 +16,11 @@ export default class UserBookingItem extends Component {
         return (
             <div
                 className="mt-5 p-5 bg-gray-100 rounded-sm  shadow flex flex-col"
-                ref={(el) => (this.componentRef = el)}
-            >
+                ref={(el) => (this.componentRef = el)}>
                 <img
-                    src={
-                        image
-                            ? `${process.env.REACT_APP_BASE_URL}/img/hotels/${image}`
-                            : "http://placehold.it/300x300?text=no image available"
-                    }
+                    src="http://placehold.it/300x300?text=no image available"
                     alt="hotel"
-                    className="w-full h-56 object-cover rounded-sm  shadow-xl "
-                />
+                    className="w-full h-56 object-cover rounded-sm  shadow-xl"/>
                 <ul className="mt-5">
                     <li className="font-semibold">
                         Booking ID : <span>#{id}</span>

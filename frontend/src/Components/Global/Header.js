@@ -10,10 +10,9 @@ function Header({ hotelId }) {
             setFirstLogin(true);
         }
     }, [])
-    const state = false
+    const state = true
     const id = 4
     const [dropDown, setDropDown] = useState(false);
-
 
     const [firstLogin, setFirstLogin] = useState(false);
     return (
@@ -166,7 +165,7 @@ function Header({ hotelId }) {
                                         to={`/admin-profile/${id}`}
                                         className="block px-4 py-2 text-gray-700 hover:bg-gray-300 focus:outline-none focus:bg-gray-300 "
                                     >
-                                        Your Admin Profile
+                                        Admin Profile
                                     </Link>
                                     <Link
                                         to="/hotel-management"
@@ -175,26 +174,13 @@ function Header({ hotelId }) {
                                     >
                                         Property Management
                                     </Link>
-                                    <Link
-                                        to="/room-management"
-                                        className="block px-4 py-2 text-gray-700 hover:bg-gray-300
-                                focus:outline-none focus:bg-gray-300 "
-                                    >
-                                        Room Management
-                                    </Link>
+                                
                                     <Link
                                         to="/booking-management"
                                         className="block px-4 py-2 text-gray-700 hover:bg-gray-300
                                 focus:outline-none focus:bg-gray-300 "
                                     >
                                         Booking Management
-                                    </Link>
-                                    <Link
-                                        to="/review-management"
-                                        className="block px-4 py-2 text-gray-700 hover:bg-gray-300
-                                focus:outline-none focus:bg-gray-300 "
-                                    >
-                                        Review Management
                                     </Link>
 
                                     <button

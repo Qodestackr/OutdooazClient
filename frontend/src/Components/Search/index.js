@@ -24,22 +24,24 @@ useEffect(() => {
             <Header />
             <div className="p-8 flex flex-col lg:flex-row text-black">
                 <ul className="mt-4 text-black">
+                <div className="flex p-8 flex-col justify-center">
                 {properties && 
                     properties.map(property => {
                         return (
-                            <div className="flex p-8 flex-row">
+                            
                             <li key={property._id} className="text-black">
+                                {console.log(property)}
                                 <h2 className="text-center text-2xl uppercase">{property.roomTitle}</h2>
-                                <img src={`http://localhost:5200/${property.mediaUrl}`} alt=""/>
+                                <img src={`http://localhost:5200/${property.mediaUrl}`} alt="" width="40%" height="50%"/>
                                <button className="text-center text-white bg-gray-800 
                                         hover:bg-gray-700 uppercase text-sm px-12 py-4 
                                         shadow hover:shadow-lg">BOOK PROPERTY</button>
                                 <span className="text-sm ml-5 text-xl text-gray-800"> $75</span>        
                             </li>
-                            <h2 className="justify-center text-center align-center">More here</h2>
-                            </div>
+                            
                         )
                     })}
+                    </div>
                 </ul>
             </div>
             <Footer />

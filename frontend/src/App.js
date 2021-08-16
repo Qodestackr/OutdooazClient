@@ -54,19 +54,13 @@ function App() {
                     {/* USER */}
                     <Route
                         exact
-                        path="/user-profile/"
+                        path="/user-profile"
                         component={UserProfile}
                     />
                     <Route
                         exact
-                        path="/user-bookings/"
+                        path="/user-bookings"
                         component={UserBookings}
-                    />
-
-                    <Route
-                        exact
-                        path="/user-reviews/"
-                        component={UserProfile}
                     />
                     
                     <Route exact path="/401" component={Unauthorized} />
