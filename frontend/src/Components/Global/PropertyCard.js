@@ -15,7 +15,7 @@ function PropertyCard({ room }) {
             <a
                 className="mx-5 rounded-t-lg overflow-hidden shadow-xl mt-5 "
                 data-aos="fade-up"
-                href={`/room`}
+                href={`/`}
             >
                 <div className="relative">
                     <img
@@ -25,10 +25,6 @@ function PropertyCard({ room }) {
                     />
                     <div className="absolute bottom-0 text-gray-100 flex">
                         <div className="bg-orange-600 py-2 px-6 rounded-tr-lg flex flex-col items-center">
-                            <span className="line-through text-gray-300 text-sm">
-                                {/* {parseFloat(room.price) + 100} $ */}
-                                Price
-                            </span>
                             <span className="text-xl">Price $</span>
                         </div>
                     </div>

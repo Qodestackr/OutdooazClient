@@ -1,27 +1,74 @@
-import React, { Component } from "react";
-import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+import React from "react";
+import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 
-class PropertyGoogleMap extends Component {
+const apiMaps = "AIzaSyAwlb-0WjDaK9Mw8fZ4jmKlMkwbWLWsyQo"
+
+const mapStyles = {
+    width: "90%",
+    heigth: "100%"
+}
+
+export class MapContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            lat: null,
+            lng: null
+        };
+    }
+    displayMarkers = () => {
+        return this.state.venues.map((venue, index) => {
+            return (
+                <Marker
+                    key={index}
+                    id={index}
+                    position={{
+                        lat: venue.lat,
+                        lng: venue.lng
+                    }}
+                    onClick={() => console.log(this.state.venues)}
+                />
+            );
+        });
+    };
+    componentDidMount() {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition((position) => {
+
+                console.log("Latitude is :", position.coords.latitude);
+                console.log("Longitude is :", position.coords.longitude);
+                this.setState({ lat: position.coords.latitude, lng: position.coords.longitude })
+
+
+            });
+
+
+        } else {
+            console.log("Not Available");
+        }
+    }
     render() {
         return (
-            <Map
+            this.state.lat &&
+            < Map
                 google={this.props.google}
                 zoom={17}
-                initialCenter={{
-                    lat: parseFloat(this.props.x),
-                    lng: parseFloat(this.props.y)
-                }}
+                style={mapStyles}
+                initialCenter={{ lat: this.state.lat, lng: this.state.lng }}
             >
                 <Marker
                     position={{
-                        lat: parseFloat(this.props.x),
-                        lng: parseFloat(this.props.y)
+                        lat: this.state.lat,
+                        lng: this.state.lng
                     }}
-                />
-            </Map>
-        )
+
+                    onClick={() => console.log(this.state.venues)}>
+                </Marker>
+            </Map >
+        );
     }
 }
+
 export default GoogleApiWrapper({
-    apiKey: "AIzaSyB2Zn8qf1kw0a0KgAA8_EW6okxAlijDbHY"
-})(PropertyGoogleMap)
+    apiKey: apiMaps
+})(MapContainer);

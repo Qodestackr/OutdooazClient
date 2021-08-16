@@ -15,6 +15,8 @@ import Search from "./Components/Search"
 import UserProfile from "./Components/UserDashboard/UserProfile"
 import UserBookings from "./Components/UserDashboard/UserBookings"
 
+import PropertyMain from "./Components/Property/index"
+
 // import { ProtectedRoute } from "./ProtectedRoute"
 import RedirectPage from "./Components/Global/RedirectPage"
 import Unauthorized from "./Components/Global/Unauthorized"
@@ -62,6 +64,8 @@ function App() {
                         path="/user-bookings"
                         component={UserBookings}
                     />
+
+                    <Route exact path="/property" component={PropertyMain}/>
                     
                     <Route exact path="/401" component={Unauthorized} />
                     <Route exact path="*/*" component={RedirectPage} />
