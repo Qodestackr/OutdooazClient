@@ -2,7 +2,7 @@ import './demo.css'
 import React, { useState, useRef, useEffect } from 'react'
 import Header from "../Global/Header"
 
-export default function Demo({ product }) {
+export default function Demo({ property }) {
   const [paidFor, setPaidFor] = useState(false)
   const [error, setError] = useState(null)
   const paypalRef = useRef()
@@ -14,10 +14,10 @@ export default function Demo({ product }) {
           return actions.order.create({
             purchase_units: [
               {
-                description: product.description,
+                description: property.description,
                 amount: {
                   currency_code: 'USD',
-                  value: product.price,
+                  value: property.price,
                 },
               },
             ],
@@ -34,14 +34,14 @@ export default function Demo({ product }) {
         },
       })
       .render(paypalRef.current)
-  }, [product.description, product.price])
+  }, [property.description, property.price])
 
   if (paidFor) {
     return (
       <>
       <Header/>
       <div className="App text-black text-3xl">
-        <h1>Congrats, your booking is successful {product.name}!</h1>
+        <h1>Congrats, your booking is successful {property.name}!</h1>
       </div>
       </>
     )
@@ -53,9 +53,9 @@ export default function Demo({ product }) {
     <div className="App">
       {error && <div>Uh oh, an error occurred! {error.message}</div>}
       <h1 className="text-black text-2xl">
-        {product.description} for ${product.price}
+        {property.description} for ${property.price}
       </h1>
-      <img alt={product.description} src={product.image} className="demo-img"/>
+      <img alt={property.description} src={property.image} className="demo-img"/>
       <div ref={paypalRef} className="ref"/>
     </div>
     </>
